@@ -30,6 +30,6 @@
 }
 
 .btn:active {
-    background-color: cornflowerblue;
+    background-color: rgb(11, 72, 187);
     color: black;
 }
