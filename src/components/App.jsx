@@ -6,7 +6,7 @@ import { ListContact } from 'components/ListContact/ListContact';
 import { ItemContact } from 'components/ItemContact/ItemContact';
 import css from 'components/App.module.css';
 
-const LS_KEY = 'contacts';
+// const LS_KEY = 'contacts';
 
 export class App extends Component {
   state = {
@@ -60,18 +60,18 @@ export class App extends Component {
     );
   };
 
-  componentDidMount() {
-    const contactsLS = JSON.parse(localStorage.getItem(LS_KEY));
-    if (contactsLS) {
-      this.setState({ contacts: contactsLS });
-    }
-  }
+  // componentDidMount() {
+  //   const contactsLS = JSON.parse(localStorage.getItem(LS_KEY));
+  //   if (contactsLS) {
+  //     this.setState({ contacts: contactsLS });
+  //   }
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.contacts !== this.state.contacts) {
-      localStorage.setItem(LS_KEY, JSON.stringify(this.state.contacts));
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.contacts !== this.state.contacts) {
+  //     localStorage.setItem(LS_KEY, JSON.stringify(this.state.contacts));
+  //   }
+  // }
 
   render() {
     const { filter } = this.state;
